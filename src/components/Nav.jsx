@@ -5,7 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 function Nav() {
     return (
         <nav>
-            <NavLink to='/'> <img src='../public/images/logo.png' className='amazon-logo' /></NavLink>
+            <NavLink to='/'> <img src='/images/logo.png' className='amazon-logo' /></NavLink>
 
             <SearchBox />
             <NavLink to=''>Hello,sign in</NavLink>

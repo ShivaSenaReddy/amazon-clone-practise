@@ -9,6 +9,7 @@ function Checkout() {
     const [cart, dispatch] = useStateValue();
     console.log(cart)
     console.log(dispatch)
+
     return (
         <div>
             {cart.map(pro => <Product
