@@ -10,11 +10,11 @@ function Nav() {
             <NavLink to='/'> <img src='/images/logo.png' className='amazon-logo' /></NavLink>
 
             <SearchBox />
-            <NavLink to=''>
+            <NavLink to='/signin'>
                 <div className='nav-line1'>Hello,</div>
                 <div className='nav-line2'>Sign in </div>
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/returns'>
                 <div className='nav-line1'>   Returns,</div>
                 <div className='nav-line2'> & Orders </div>
             </NavLink>

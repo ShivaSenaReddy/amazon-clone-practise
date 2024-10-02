@@ -127,3 +127,13 @@ small {
 .checkout-product--description {
   line-height: 2;
 }
+/* signin page */
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+}

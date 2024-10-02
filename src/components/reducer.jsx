@@ -1,6 +1,7 @@
 import React from 'react'
 
 function reducer(state, action) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
     switch (action.type) {
         case 'ADD_TO_BASKET':
             let index = state.findIndex(ele => ele.id === action.item.id)
@@ -10,10 +11,6 @@ function reducer(state, action) {
                 console.log(state)
                 return state
             }
-            console.log([...state, {
-                name: action.item.name, price: action.item.price, id: action.item.id, image: action.item.image,
-                rating: action.item.rating, quantity: 1
-            }])
             return [...state, {
                 name: action.item.name, price: action.item.price, id: action.item.id, image: action.item.image,
                 rating: action.item.rating, quantity: 1

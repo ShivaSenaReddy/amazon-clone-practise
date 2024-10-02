@@ -32,7 +32,7 @@ function Checkout() {
                 />)}
             </div>
             <div className='order-total'>
-                <p>Subtotal {totalCost(cart)}</p>
+                <p>Subtotal Rs {totalCost(cart)}</p>
                 <small>
                     <input type='checkbox' />
                     This Order contains gift option</small>

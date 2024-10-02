@@ -12,6 +12,7 @@ function StateProvider({ children }) {
 function useDispatch() {
     const [state, dispatch] = useContext(State);
     // console.log(dispatch)
+    localStorage.setItem('cart', JSON.stringify(state))
     return dispatch;
 }
 
