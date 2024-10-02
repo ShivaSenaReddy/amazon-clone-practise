@@ -11,6 +11,8 @@ nav {
   background-color: #131921;
   align-items: center;
   justify-content: space-around;
+  position: sticky;
+  width: 100%;
 }
 nav a {
   margin-left: 2rem;
@@ -80,4 +82,41 @@ nav a {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5%;
+}
+
+/* checkout page styling */
+.checkout {
+  width: 70%;
+  flex-grow: 1;
+}
+.checkout-cover {
+  width: 100%;
+}
+.checkout-product {
+  display: flex;
+  align-items: center;
+}
+.checkout-page {
+  display: flex;
+}
+.order-total {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+  height: fit-content;
+  line-height: 2;
+}
+small {
+  align-items: center;
+  display: flex;
+}
+.checkout-btn {
+  background-color: #f7ca00;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5%;
+  margin: 1rem;
+}
+.checkout-product--description {
+  line-height: 2;
 }

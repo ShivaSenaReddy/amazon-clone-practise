@@ -18,3 +18,7 @@ function useDispatch() {
 export { useDispatch, State };
 export default StateProvider
 export const useStateValue = () => useContext(State);
+export function useStateExport() {
+    const [cart, dispatch] = useContext(State);
+    return [cart, dispatch]
+}

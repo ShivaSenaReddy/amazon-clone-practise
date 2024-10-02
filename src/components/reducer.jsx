@@ -9,13 +9,20 @@ function reducer(state, action) {
                 name: action.item.name,
                 price: action.item.price,
                 id: action.item.id,
-                image: action.item.image
+                image: action.item.image,
+                rating: action.item.rating
+
             }]
             console.log(cart)
 
             return [...state, {
-                name: action.item.name, price: action.item.price, id: action.item.id, image: action.item.image
+                name: action.item.name, price: action.item.price, id: action.item.id, image: action.item.image,
+                rating: action.item.rating
             }];
+
+        case 'REMOVE_FROM_BASKET':
+            console.log(cart.filter(e => e.id != action.id))
+            return [...state.filter(e => e.id != action.item.id)]
     }
 }
 
