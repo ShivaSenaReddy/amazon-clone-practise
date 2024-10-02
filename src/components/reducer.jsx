@@ -1,27 +1,26 @@
 import React from 'react'
-let cart = []
-function reducer(state, action) {
 
+function reducer(state, action) {
     switch (action.type) {
         case 'ADD_TO_BASKET':
-            cart.find(e => e.name === action.item.name)
-            cart = [...state, {
-                name: action.item.name,
-                price: action.item.price,
-                id: action.item.id,
-                image: action.item.image,
-                rating: action.item.rating
-
-            }]
-            console.log(cart)
-
+            let index = state.findIndex(ele => ele.id === action.item.id)
+            console.log('index', index)
+            if (index > -1) {
+                state[index].quantity = state[index].quantity + 1;
+                console.log(state)
+                return state
+            }
+            console.log([...state, {
+                name: action.item.name, price: action.item.price, id: action.item.id, image: action.item.image,
+                rating: action.item.rating, quantity: 1
+            }])
             return [...state, {
                 name: action.item.name, price: action.item.price, id: action.item.id, image: action.item.image,
-                rating: action.item.rating
+                rating: action.item.rating, quantity: 1
             }];
 
         case 'REMOVE_FROM_BASKET':
-            console.log(cart.filter(e => e.id != action.id))
+            // console.log(cart.filter(e => e.id != action.id))
             return [...state.filter(e => e.id != action.item.id)]
     }
 }

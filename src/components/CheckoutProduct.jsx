@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from './StateProvider'
 
-function CheckoutProduct({ name, image, price, id, rating }) {
+function CheckoutProduct({ name, image, price, id, rating, quantity }) {
     console.log('checkout', rating)
     const dispatch = useDispatch()
     function removeItem() {
@@ -17,7 +17,8 @@ function CheckoutProduct({ name, image, price, id, rating }) {
                 <p>
                     {name}
                 </p>
-                <p><span>Rs {price}</span></p>
+
+                <p><span>Rs {price} x {quantity} qty </span></p>
                 <p>{new Array(rating).fill('⭐')}</p>
                 <button className='product--Btn' onClick={() => removeItem()} >Remove from Cart</button>
 

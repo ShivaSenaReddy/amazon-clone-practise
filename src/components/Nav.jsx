@@ -10,11 +10,17 @@ function Nav() {
             <NavLink to='/'> <img src='/images/logo.png' className='amazon-logo' /></NavLink>
 
             <SearchBox />
-            <NavLink to=''>Hello,sign in</NavLink>
-            <NavLink to='/'>Returns and Orders</NavLink>
+            <NavLink to=''>
+                <div className='nav-line1'>Hello,</div>
+                <div className='nav-line2'>Sign in </div>
+            </NavLink>
+            <NavLink to='/'>
+                <div className='nav-line1'>   Returns,</div>
+                <div className='nav-line2'> & Orders </div>
+            </NavLink>
 
             <NavLink to='/checkout' className='shopping--cart'>
-                <div>
+                <div className='view-cart'>
                     <FiShoppingCart className='cart--icon' size={100} />
                     {cart.length}
                 </div>

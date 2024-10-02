@@ -7,13 +7,13 @@ import ContextProvider from './components/ContextProvider.jsx'
 import StateProvider from './components/StateProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <StateProvider>
-        <ContextProvider>
-          <App />
-        </ContextProvider>
-      </StateProvider>
-    </BrowserRouter>
-  </StrictMode>,
+  // <StrictMode>
+  <BrowserRouter>
+    <StateProvider>
+      <ContextProvider>
+        <App />
+      </ContextProvider>
+    </StateProvider>
+  </BrowserRouter>
+  // </StrictMode>,
 )
